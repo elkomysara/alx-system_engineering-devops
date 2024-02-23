@@ -1,1 +1,1 @@
-This is a mandatory file
+This is a README.md file inside alx-system_engineering-devops/0x00-shell_basics
