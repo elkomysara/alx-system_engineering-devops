@@ -1,0 +1,17 @@
+total 276
+drwxr-xr-x  6 elkomy elkomy  4096 Mar 23 13:04 .
+drwxr-xr-x 18 elkomy elkomy  4096 Mar 16 21:25 ..
+drwxr-xr-x  8 elkomy elkomy  4096 Mar 22 17:55 .git
+-rw-r--r--  1 elkomy elkomy    54 Mar  8 13:10 .gitignore
+drwxr-xr-x  2 elkomy elkomy  4096 Mar  9 20:47 0x00-shell_basics
+-rw-r--r--  1 elkomy elkomy 75098 Mar  2 15:54 0x00-shell_basics.ipynb
+drwxr-xr-x  2 elkomy elkomy  4096 Mar 23 13:03 0x01-shell_permissions
+-rw-r--r--  1 elkomy elkomy 75178 Mar 15 12:20 0x01-shell_permissions.ipynb
+drwxr-xr-x  2 elkomy elkomy  4096 Mar 23 13:03 0x02-shell_redirections
+-rw-r--r--  1 elkomy elkomy 82020 Mar 23 13:04 0x02. Shell, InputOutput Redirections and filters.ipynb
+-rw-r--r--  1 elkomy elkomy   108 Mar  2 16:08 README.md
+-rw-r--r--  1 elkomy elkomy    12 Mar 22 17:55 \*\\'"Best School"\'\\*$\?\*\*\*\*\*:)
+-rwxr-x-wx  1 elkomy elkomy     0 Mar  9 01:18 hello
+-rw-r--r--  1 elkomy elkomy     0 Mar 23 13:04 ls_cwd_content
+-rw-r--r--  1 elkomy elkomy   688 Mar  2 14:52 school.mgc
+-rw-r--r--  1 elkomy elkomy     0 Feb 28 01:08 test.HTML
