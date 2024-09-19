@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script parses the Apache log file, groups by IP and HTTP status code, and sorts by occurrences.
+
+awk '{print $1, $9}' apache-access.log | sort | uniq -c | sort -nr
