@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# This script displays the part of each filename after the first dash in the current directory (excluding hidden files)
+
+for file in *  # List all files in the current directory excluding hidden files
+do
+  # Check if the filename contains a dash
+  if [[ $file == *-* ]]
+  then
+    # Display everything after the first dash
+    echo "${file#*-}"
+  fi
+done
