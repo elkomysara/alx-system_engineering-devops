@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# This script stops the process 4-to_infinity_and_beyond without using kill or killall
+
+# Get the PID of the 4-to_infinity_and_beyond process and send SIGTERM using pkill
+pkill -f "4-to_infinity_and_beyond"
+
+# Check if the pkill command was successful
+if [ $? -eq 0 ]; then
+  echo "4-to_infinity_and_beyond process has been successfully terminated."
+else
+  echo "Failed to stop 4-to_infinity_and_beyond process."
+fi
