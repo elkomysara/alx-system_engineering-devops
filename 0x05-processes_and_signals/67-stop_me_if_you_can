@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script stops the 7-highlander process without using kill or killall
+
+pkill -f "7-highlander"
+
+# Check if the pkill command was successful
+if [ $? -eq 0 ]; then
+  echo "7-highlander process has been successfully terminated."
+else
+  echo "Failed to stop 7-highlander process."
+fi
