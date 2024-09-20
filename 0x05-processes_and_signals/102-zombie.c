@@ -31,17 +31,17 @@ for (i = 0; i < 5; i++)
 pid = fork();
 if (pid == 0)
 {
-// Child process immediately exits to become a zombie
+/* Child process immediately exits to become a zombie */
 exit(0);
 }
 else
 {
-// Parent process continues and prints the zombie PID
+/* Parent process prints the zombie PID */
 printf("Zombie process created, PID: %d\n", pid);
 }
 }
 
-// Parent process enters an infinite loop to keep zombies alive
+/* Parent process enters infinite loop to keep zombies alive */
 infinite_while();
 
 return (0);
