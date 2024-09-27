@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# This script runs a docker container, fixes the Apache server issue, and returns "Hello Holberton".
+
+# Run the docker container
+docker run -p 8080:80 -d -it holbertonschool/265-0
+
+# Get the container ID
+container_id=$(docker ps -q --filter ancestor=holbertonschool/265-0)
+
+# Connect to the docker container and fix Apache
+docker exec -it "$container_id" bash -c "
+    # Update the package list and install Apache if needed
+    apt-get update
+    apt-get install -y apache2
+
+    # Ensure Apache is running
+    service apache2 restart
+
+    # Create a custom HTML page that contains Hello Holberton
+    echo 'Hello Holberton' > /var/www/html/index.html
+
+    # Exit the container
+    exit
+"
+
+# Test by curling localhost on port 8080
+curl localhost:8080
