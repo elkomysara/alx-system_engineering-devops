@@ -1,13 +1,20 @@
 
 #!/usr/bin/env bash
-# Configures an Nginx server to redirect /redirect_me to another page with a 301 Moved Permanently status.
+#Install nginx web server
+sudo apt-get update && sudo apt-get install nginx
 
-# Install Nginx if not already installed
-apt-get update
-apt-get install -y nginx
+# Start nginx service
+sudo service nginx start
 
-# Create a configuration for redirection
-sed -i '/^server {/a \    location /redirect_me {\n        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n    }\n' /etc/nginx/sites-available/default
+# Create index.html with "Hello World!"
+sudo touch /var/www/html/index.html
+echo "Hello World!" | sudo tee /var/www/html/index.html
 
-# Restart Nginx to apply the changes
+# Update Nginx configuration to add redirection
+sudo sed -i '/^}$/i \ \n\trewrite ^/redirect_me$ https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+
+# Test Nginx configuration for syntax errors
+sudo nginx -t
+
+# Restart Nginx to apply changes
 service nginx restart
